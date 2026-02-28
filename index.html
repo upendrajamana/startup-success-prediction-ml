@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Startup Success Prediction</title>
+    <style>
+        body { font-family: Arial; background-color: #f2f2f2; }
+        .container { width: 40%; margin: auto; margin-top: 50px; padding: 20px; background: white; border-radius: 10px; }
+        input { width: 100%; padding: 8px; margin: 5px 0; }
+        button { padding: 10px; background: green; color: white; border: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Enter Startup Parameters</h2>
+
+    <form action="/predict" method="POST">
+
+        <input type="number" step="any" name="age_first_funding" placeholder="Age at First Funding Year" required>
+        <input type="number" step="any" name="age_last_funding" placeholder="Age at Last Funding Year" required>
+        <input type="number" step="any" name="age_first_milestone" placeholder="Age at First Milestone Year" required>
+        <input type="number" step="any" name="age_last_milestone" placeholder="Age at Last Milestone Year" required>
+        <input type="number" step="any" name="relationships" placeholder="Number of Relationships" required>
+        <input type="number" step="any" name="funding_rounds" placeholder="Number of Funding Rounds" required>
+        <input type="number" step="any" name="total_funding" placeholder="Total Funding (USD)" required>
+        <input type="number" step="any" name="milestones" placeholder="Number of Milestones" required>
+        <input type="number" step="any" name="avg_participants" placeholder="Average Participants" required>
+
+        <button type="submit">Predict</button>
+    </form>
+</div>
+
+</body>
+</html>
